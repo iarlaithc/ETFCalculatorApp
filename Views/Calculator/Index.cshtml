@@ -5,7 +5,11 @@
 }
 
 <div class="text-center">
-    @Model.DeemedDisposal
-    @Model.CompoundingInterval
-    @Model.RecurringInvestmentAmount
+    <p>Starting Amount : €@Model.StartingAmount</p>
+    <p>Recurring Amount : €@Model.RecurringInvestmentAmount</p>
+    <p>Total Time in Years : @Model.TotalInvestmentYears</p>
+    <p>Growth Rate : @Model.ExpectedGrowthPercentage%</p>
+    <p>Interval : @Model.RecurringInvestmentInterval</p>
+
+    <p>€@Model.TotalResult.ToString("F2")</p>
 </div>
