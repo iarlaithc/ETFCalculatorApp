@@ -4,12 +4,59 @@
     ViewData["Title"] = "ETF Investments Calculator";
 }
 
-<div class="text-center">
-    <p>Starting Amount : €@Model.StartingAmount</p>
-    <p>Recurring Amount : €@Model.RecurringInvestmentAmount</p>
-    <p>Total Time in Years : @Model.TotalInvestmentYears</p>
-    <p>Growth Rate : @Model.ExpectedGrowthPercentage%</p>
-    <p>Interval : @Model.RecurringInvestmentInterval</p>
+<div class="text-center" style="max-width:50%;">
 
-    <p>€@Model.TotalResult.ToString("F2")</p>
+    <h3>Editor:</h3>
+    <table>
+        <tr>
+            <td class="inputlabel">@CommonStrings.StartingAmount</td>
+            <td>@Html.EditorFor(x => x.StartingAmount)</td>
+        </tr>
+        <tr>
+            <td class="inputlabel">@CommonStrings.RecurringInvestmentAmount</td>
+            <td>@Html.EditorFor(x => x.RecurringInvestmentAmount)</td>
+        </tr>
+        <tr>
+            <td class="inputlabel">@CommonStrings.TotalInvestmentYears</td>
+            <td>@Html.EditorFor(x => x.TotalInvestmentYears)</td>
+        </tr>
+        <tr>
+            <td class="inputlabel">@CommonStrings.ExpectedInterest @CommonStrings.PercentageSymbol</td>
+            <td>@Html.EditorFor(x => x.ExpectedGrowthPercentage)</td>
+        </tr>
+        <tr>
+            <td class="inputlabel">@CommonStrings.RecurringInvestmentInterval</td>
+            <td>@Html.EditorFor(x => x.RecurringInvestmentInterval)</td>
+        </tr>
+        <tr>
+            <td class="inputlabel">@CommonStrings.CompoundingInterval</td>
+            <td>@Html.EditorFor(x => x.CompoundingInterval)</td>
+        </tr>
+        <tr class="totalbox">
+            <td class="inputlabel">@CommonStrings.Total</td>
+            <td>@Model.TotalResult.ToString("F2")</td>
+        </tr>
+    </table>
+
 </div>
+
+
+<style>
+
+    .inputlabel{
+        text-align:right;
+    }
+
+    tr{
+        padding-bottom:10px;
+    }
+
+    td{
+        padding-right:15px;
+    }
+
+    .totalbox{
+        padding-top:20px;
+    }
+    
+</style>
