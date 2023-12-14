@@ -32,6 +32,9 @@
             <td class="inputlabel">@CommonStrings.CompoundingInterval</td>
             <td>@Html.EditorFor(x => x.CompoundingInterval)</td>
         </tr>
+        <tr>
+            <td id="calculatebtn" class="inputlabel" onclick="Calculate()">@CommonStrings.Calculate</td>
+        </tr>
         <tr class="totalbox">
             <td class="inputlabel">@CommonStrings.Total</td>
             <td>@Model.TotalResult.ToString("F2")</td>
@@ -40,6 +43,13 @@
 
 </div>
 
+<script>
+    function Calculate()
+    {
+        //do maths in controller with stuff
+    }
+
+</script>
 
 <style>
 
