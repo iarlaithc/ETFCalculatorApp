@@ -135,6 +135,9 @@
   <data name="RecurringInvestmentInterval" xml:space="preserve">
     <value>Recurring Investment Interval</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
   <data name="StartingAmount" xml:space="preserve">
     <value>Starting Amount</value>
   </data>
